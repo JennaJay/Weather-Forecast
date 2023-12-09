@@ -1,0 +1,41 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(247, 228, 204)
+}
+
+h1 {
+    font-size: 36px;
+    color: aliceblue;
+    text-align: center;
+    background: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
+    margin-bottom: 25px;
+    padding: 1.5%
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#searchBtn {
+    font-weight: bold;
+    height: 25px;
+    
+}
+
+.input-form {
+    width: 50%
+
+}
+
+.container {
+    display: flex;
+    gap: 35px;
+    padding: 10px;
+    margin: 0;
+}
+
+input {
+    margin: 7px 0 9px 0;
+    height: 25px;
+}
