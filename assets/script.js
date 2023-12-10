@@ -5,6 +5,9 @@ var todayCity = document.querySelector('#todayCity')
 var todayTemp = document.querySelector('#todayTemp')
 var todayWind = document.querySelector('#todayWind')
 var todayHumidity = document.querySelector('#todayHumidity')
+var nextFive = document.querySelector('#fiveWeather')
+//var weatherIcon 
+
 
 function getLatLon() {
 
@@ -21,6 +24,7 @@ fetch(latlon)
     console.log(data);
 
     getWeather(lat,lon)
+    getFiveDay(lat,lon)
 
 })
 }
@@ -28,7 +32,7 @@ searchButton.addEventListener("click", getLatLon)
 
 
 function getWeather(lat,lon) {
-    var weather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`
+    var weather = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`
     fetch(weather)
     .then(function (response) {
         return response.json();
@@ -43,7 +47,17 @@ function getWeather(lat,lon) {
     });
 }
 
+function getFiveDay(lat,lon) {
+    var weatherFive = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`
+    fetch(weatherFive)
+    .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
 
+})
+}
 
 
 

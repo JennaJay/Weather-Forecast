@@ -39,3 +39,8 @@ input {
     margin: 7px 0 9px 0;
     height: 25px;
 }
+
+.todayBox {
+    display: flex;
+    flex-direction: column;
+}
