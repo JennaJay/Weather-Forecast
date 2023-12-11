@@ -5,7 +5,8 @@ var todayCity = document.querySelector('#todayCity')
 var todayTemp = document.querySelector('#todayTemp')
 var todayWind = document.querySelector('#todayWind')
 var todayHumidity = document.querySelector('#todayHumidity')
-var nextFive = document.querySelector('#fiveWeather')
+var nextFive = document.querySelector('#weatherCard')
+var dayOne = document.querySelector('#dayOne')
 //var weatherIcon 
 
 
@@ -54,10 +55,23 @@ function getFiveDay(lat,lon) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
 
-})
-}
+        var fiveDays = [];
+        var oneaDay = data.list.filter() 
+        var weatherDate = new Date(forecast.dt_txt).getDate();
+        if(!fiveDays.includes(weatherDate)) {
+            return fiveDays.push(weatherDate);
+        }
+        });
+        console.log(oneaDay);
+
+        dayOne.textContent 
+        }
+    
+
+
+
+
 
 
 

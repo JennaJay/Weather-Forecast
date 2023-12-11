@@ -15,24 +15,28 @@ h1 {
 label {
     font-weight: bold;
     font-size: 20px;
+    width: 70%;
 }
 
 #searchBtn {
     font-weight: bold;
     height: 25px;
+    width: 50%;
+    color:#886AEA
     
 }
 
 .input-form {
-    width: 50%
+    width: 40%;
 
 }
 
+
 .container {
     display: flex;
-    gap: 35px;
     padding: 10px;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 input {
@@ -41,6 +45,49 @@ input {
 }
 
 .todayBox {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    background-color: #886AEA;
+    color: white;
+    width: 50%;
+    
+}
+
+.fivedays {
+    width: 100%
+    
+
+}
+.cityname {
+    width: 70%
+}
+
+h2 {
+    text-align: center;
+}
+
+.todayWeather {
+    padding-left: 20px;   
+}
+
+#todayCity {
+    font-size: 30px;
+}
+
+#todayTemp {
+    font-size: 20px;
+    padding: 1%;
+}
+
+#todayWind {
+    font-size: 20px;
+    padding: 1%;
+}
+
+#todayHumidity {
+    font-size: 20px;
+    padding: 1%;
+}
+
+.fivedays h2 {
+    padding: 2%;
 }
