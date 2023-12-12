@@ -49,6 +49,7 @@ input {
     background-color: #886AEA;
     color: white;
     width: 50%;
+    border-radius: 3px;
     
 }
 
@@ -90,4 +91,17 @@ h2 {
 
 .fivedays h2 {
     padding: 2%;
+}
+
+.castcards {
+    display: flex;
+    gap: 20px;
+}
+
+.castcards .card {
+    background-color: #a993ef;
+    list-style: none;
+    padding: 18px 16px;
+    border-radius: 5px;
+    width: calc(100% / 5); 
 }

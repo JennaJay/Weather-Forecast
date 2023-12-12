@@ -5,13 +5,13 @@ var todayCity = document.querySelector('#todayCity')
 var todayTemp = document.querySelector('#todayTemp')
 var todayWind = document.querySelector('#todayWind')
 var todayHumidity = document.querySelector('#todayHumidity')
-var nextFive = document.querySelector('#weatherCard')
+//var nextFive = document.querySelector('#weatherCard')
 var dayOne = document.querySelector('#dayOne')
-//var weatherIcon 
+
 
 
 function getLatLon() {
-
+    
 var cityname = getCity.value
 
 var latlon = `http://api.openweathermap.org/geo/1.0/direct?q=${cityname}&limit=1&appid=${APIKey}`
@@ -55,18 +55,20 @@ function getFiveDay(lat,lon) {
         return response.json();
       })
       .then(function (data) {
-
-        var fiveDays = [];
-        var oneaDay = data.list.filter() 
-        var weatherDate = new Date(forecast.dt_txt).getDate();
-        if(!fiveDays.includes(weatherDate)) {
-            return fiveDays.push(weatherDate);
-        }
-        });
-        console.log(oneaDay);
-
-        dayOne.textContent 
-        }
+          var fiveDays = [];
+          
+          var fiveCards = data.list.filter(forecast, function() {
+              var weatherDate = new Date(forecast.dt_txt).getDate();
+              if(!fiveDays.includes(weatherDate)) {
+                  return fiveDays.push(weatherDate);
+                }
+            });
+            console.log(fiveCards);
+        })
+        //console.log(data); 
+    }
+    
+    
     
 
 
